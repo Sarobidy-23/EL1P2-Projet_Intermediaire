@@ -1,0 +1,20 @@
+.ici{
+    display: flex;
+    justify-self: start;
+}
+#fileToUpload{
+    margin: 2%;
+    cursor: pointer;
+}
+img{
+    margin-left: 20px;
+    width: 100%;
+}
+.photo{
+    width: 30%;
+}
+.env{
+    border: 2px solid beige;
+    width: 20%;
+    height: 20%;
+}
