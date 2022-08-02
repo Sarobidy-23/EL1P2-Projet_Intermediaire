@@ -1,20 +1,103 @@
 .ici{
     display: flex;
-    justify-self: start;
+    justify-content: flex-start;
 }
 #fileToUpload{
-    margin: 2%;
+    top: 0;
+    margin: 10px;
     cursor: pointer;
-}
-img{
-    margin-left: 20px;
+    font-size: 15px;
+    display: none
+}img{
     width: 100%;
+    border-radius: 20px;
 }
 .photo{
-    width: 30%;
+    margin-left: 20px;
+    position: relative;
+    width: 40%;
+    min-width: 100px;
 }
 .env{
     border: 2px solid beige;
     width: 20%;
     height: 20%;
+}
+.cadre{    	
+    border: 1.5px solid rgb(33, 214, 33);
+    width: var(--width);
+    height: var(--height);
+    top: var(--top);
+    left: var(--left);
+    position: absolute;
+    z-index: 10;
+}
+.file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.files{
+    font-weight: bold;
+    /* border: 2px solid black; */
+    font-size: clamp(10px, 2vw, 40px);
+    padding: 1%;
+    text-transform: uppercase;
+    width: 20%;
+    text-align: center;
+    margin: 5%;
+    cursor: pointer;
+    border-radius: 15px;
+    background: linear-gradient(40deg, #9050E8, #A89850 60%);
+    transition: all 0.5s ease;
+}
+.files:hover{
+    transform: scale(1.2);
+    transition: all 0.5s ease;
+}
+.navBar{
+    position: absolute;
+    top: 3%;
+    padding-left: 0.6%;
+    width: 20%;
+    height: 5vw;
+    background-color: #3f51b5;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    border-radius: 0px 20px 20px 0px;
+    animation: animation 20s steps(15) infinite;
+}
+.text:after{
+    content: "";
+    animation: navBarAnimation 20s steps(15) infinite;
+    text-transform: uppercase;
+}
+
+@media (max-width:550px) {
+    .ici{
+        flex-wrap: wrap;
+
+    }
+}
+
+@keyframes navBarAnimation{
+    0%{content: "";}
+    10%{content: "faces";}
+    20%{content: "faces detector";}
+    30%{content: "faces detector for";}
+    40%{content: "faces detector for age ";}
+    60%{content: "faces detector for age estimator";}
+    70%{content: "";}
+}
+
+@keyframes animation{
+    0%{width: 0%}
+    9%{width: 6%;}
+    19%{width: 13%;}
+    39%{width: 17%;}
+    59%{width: 20%;}
+    79%{width: 19%;}
+    100%{width: 0%;}
 }
